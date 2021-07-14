@@ -1,2 +1,7 @@
-x=30+3
-print(x)
+print("enter number a")
+a = input()
+print("enter number b")
+b = input()
+D=int(a)
+E=int(b)
+print(D+E)
