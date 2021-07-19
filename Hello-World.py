@@ -1,2 +1,2 @@
 print("hello world")
-print("!2 fresh eggs")
+print("welcome to the class!")
