@@ -47,6 +47,5 @@ lucid.begin_fill()
 lucid.color("red")
 lucid.circle(30)
 lucid.end_fill()
-
 lucid.hideturtle()
 turtle.exitonclick()
