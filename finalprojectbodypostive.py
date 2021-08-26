@@ -1,14 +1,41 @@
 from tkinter import *
 import random
+import time
 # make window
 window = Tk()
 window.title('I Am?')
 
-canvas = Canvas(window, width=400, height=400)
+canvas = Canvas(window, width=400, height=400, bg="white")
 canvas.pack()
-title = canvas.create_text(200, 200, text= 'I Am...', fill='black', font = ('Helvetica', 30))
-directions = canvas.create_text(200, 300, text= 'How are you feeling?', fill='black', font = ('Helvetica', 20))
-background_image=PhotoImage(file="mirror.gif")
-background_label = Label(window, image=background_image)
-background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+background_image = PhotoImage(file="mirror.gif")
+background = canvas.create_image(200, 200, image=background_image)
+
+title = canvas.create_text(200, 200, text="I Am...", fill="blue", font=("Helvetica", 30))
+directions = canvas.create_text(200, 300, text= "How are you feeling?", fill="green", font=("Helvetica", 15))
+
+def clear_intro():
+    canvas.delete(title)
+    canvas.delete(directions)
+
+def show_question1():
+    global QuestionOne
+    QuestionOne=canvas.create_text(200, 200, text="I Am Beautiful? Yes/No", fill="blue", font=("Helvetica", 15))
+
+def clear_question1():
+    global QuestionOne
+    canvas.delete(QuestionOne)
+window.after(2000, clear_intro)
+window.after(2000, show_question1)
+window.after(4000, clear_question1)
+   
+def show_QuestionTwo():
+    global QuestionTwo
+    QuestionTwo=canvas.create_text(200, 200, text="I Love my Body? Yes/No", fill="blue", font=("Helvetica", 15))
+def clear_QuestionTwo():
+    global QuestionTwo
+    canvas.delete(QuestionTwo)
+
+window.after(4000, show_QuestionTwo)
+window.after(6000, clear_QuestionTwo)
 window.mainloop() # last line is the GUI main event loop
