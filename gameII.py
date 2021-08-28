@@ -152,5 +152,4 @@ window.after(1000, make_candy) # start making candy
 window.after(1000, move_candy) # start moving candy
 window.after(1000, check_hits) # check if character hit a candy
 window.after(1000, move_character) # handle keyboard controls
-
 window.mainloop() # last line is the GUI main event loop

@@ -28,7 +28,25 @@ def clear_question1():
 window.after(2000, clear_intro)
 window.after(2000, show_question1)
 window.after(4000, clear_question1)
-   
+move_direction = 0 # track which direction player is moving
+# Function handles when user first presses arrow keys
+def check_input(event):
+    global Answer
+    key = event.keysym
+    if key == "Right":
+       Answer = "yes"
+    elif key == "Left":
+        Answer = "Left"
+ 
+        def end_input(event):
+        global Answer
+    move_direction = "None"
+
+# Function handles when user stop pressing arrow keys
+def end_input(event):
+    global move_direction
+    move_direction = "None"
+
 def show_QuestionTwo():
     global QuestionTwo
     QuestionTwo=canvas.create_text(200, 200, text="I Love my Body? Yes/No", fill="blue", font=("Helvetica", 15))
