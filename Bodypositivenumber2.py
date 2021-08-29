@@ -13,7 +13,7 @@ Questions = [
     "My body image changes based on what others say about my apprence."]
 Affirmation=[
     "Find one part of your body you love.",
-    "Your body is worthy Of nurishment",
+    "Your body is worthy Of nurishment.",
     "You are profoundly loved by those that see their own worth." ,
     "When we fear rejection or being unloved it can be easier to be our harshest critics. We feel better putting ourselves down because we assume everyone else wants to critize our bodies.",
     "Others put us down because they don't  feel good about themselves."]
@@ -59,32 +59,29 @@ else:
 
 def TurtlePoem():
     import turtle
-    poem=turtle.Turtle()
-    poem.pendown()
-    poem.goto(-300,0)
-    poem.write("""What lies Beyond the surface of glass and Almagamate?
-Is it found by looking in a mirror or grasping the parts you hate.
+    HeartPoem=turtle.Turtle()
+    HeartPoem.goto(-300,0)
+    HeartPoem.pendown()
+    HeartPoem.write("""What lies beyond the surface of glass and almagamate?
+Is it found by looking in a mirror and grasping the parts you hate.
 Your body is special a work of great art!
 Please never from these words should you part.
-Look or feel your body and mention one part
+so when you Look or feel your body please mention one part
 Find the one you love in your heart.""", font=("Arial", 16, "normal"))
-    poem.penup()
-    turtle.exitonclick()
-def curve():
-    import turtle
-    heart=turtle.Turtle()
-    heart.speed("fastest")
+    HeartPoem.penup()
+    HeartPoem.speed("fastest")
+    HeartPoem.goto(0,-150)
+    HeartPoem.pendown()
     for i in range(200):
-        heart.right(1)
-        heart.forward(1)
-        heart.color("black", "red")  
-        heart.begin_fill()
-        heart.left(140)
-        heart.forward(111.65)
-        heart.left(120)
-        heart.forward(111.65)
-        heart.end_fill()
+        HeartPoem.right(1)
+        HeartPoem.forward(1)
+        HeartPoem.color("black", "red")  
+        HeartPoem.begin_fill()
+        HeartPoem.left(140)
+        HeartPoem.forward(113)
+        HeartPoem.left(120)
+        HeartPoem.forward(112)
+        HeartPoem.end_fill()
     turtle.exitonclick()
 print("Here is a poem for you")
 TurtlePoem()
-curve()
