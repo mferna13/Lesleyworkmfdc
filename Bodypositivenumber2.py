@@ -1,10 +1,6 @@
 import time
-import random
-from tkinter.constants import NO, S
-# REMOVE """ HERE
-#"""
 print("Welcome to the Body Positivity Questionaire. Please Answer each question with yes or no.")
-#List will help make the questions easier to input each time
+#List will help make the questions easier to input each time and the lists allow for afirmations to print concurrently 
 Questions = [
     "I don't like certain parts of my body.",
     "I deny my bodies needs regularly.",
@@ -19,20 +15,20 @@ Affirmation=[
     "Others put us down because they don't  feel good about themselves."]
         
 Num_Questions = len(Questions)
-# using functions and boolean operator
+# using functions while loops and boolean operators
 def AskForYesOrNo(question):
     Answer = input(question)
 
     while not (Answer=="Yes" or Answer=="yes" or Answer=="no" or Answer=="No"):
         print("Remember yes and no.")
-        time.sleep=(3)
+        time.sleep(3)
         Answer=input(question)
 
     return Answer
 
 YesCount = 0
 NoCount = 0
-
+#using for loops
 for i in range(Num_Questions):
     current_question = Questions[i]
     print("Here is a question #", i+1, "for you:")
@@ -53,9 +49,8 @@ print("number of no=", NoCount)
 if YesCount>NoCount:
     print("I'm Here to share a resource I find helpful. Lets remember every-body has somebody to care for. Please visit https://positivepsychology.com/positive-body-image/")
 else:
-    print(" Check in on your friends they might be struggling with body positivity!")
-#"""
-# REMOVE """ HERE
+    print(" It's great you feel good about your body.Check in on your friends they might be struggling with body positivity!")
+#using turtle  to give code more User Centered design by making poem easier to see
 
 def TurtlePoem():
     import turtle
