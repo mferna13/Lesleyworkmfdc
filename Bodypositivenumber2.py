@@ -5,10 +5,10 @@ print("Welcome to the Body Positivity Questionaire. Please Answer each Statement
 # Store questions and affirmations in lists (concurrently - question 1 corresponds to affirmation 1). This makes our code more flexible as one can add/modify questions without changing the rest of the code.
 Statements = [
     "I don't like certain parts of my body. ",
-    "I deny my bodies needs regularly. ",
+    "I deny my body's needs regularly. ",
     "I don't think anyone could ever love me becuse of my body. ",
     "Most of my inner comments to my body are negative or judgmental. ",
-    "My body image changes based on what others say about my apprence. "]
+    "My body image changes based on what others say about my appearance. "]
 Affirmation=[
     "Find one part of your body you love. ",
     "Your body is worthy Of nourishment. ",
